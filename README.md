@@ -2,8 +2,8 @@
 > This repository is re-initalised.
 > Please run
 > ```
-brew untap smileycreations15/tap
-brew tap smileycreations15/tap
+> brew untap smileycreations15/tap
+> brew tap smileycreations15/tap
 > ```
 > to update the repository.
 # homebrew-tap
