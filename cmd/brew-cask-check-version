@@ -1,0 +1,35 @@
+
+#!/bin/bash
+#: Check a list of versions for a cask in smileycreations15/homebrew-tap.
+#: Syntax:
+#:   brew cask-check-version [cask]
+#:
+#: To install a version, use brew cask-install-version [cask] [version]
+analytics=$(cat ~/.tap-analytics-brew 2>/dev/null)
+if [[ "" == $analytics ]]
+then
+  echo "This tap uses analytics. To disable analytics, run 'brew tap-analytics disable'. To enable, run 'brew analytics enable'."
+  echo "enabled" > ~/.tap-analytics-brew
+  analytics="disabled"
+fi
+if [ $analytics == "enabled" ]
+then
+  curl "https://smileycreations15.wixsite.com/analytics/_functions/analytics?a=cask-check-version&b="$(echo $1 | perl -p -e 's/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg')"&c=null" > /dev/null 2>&1
+fi
+if [[ "" == $1 ]]
+then
+  echo "Please enter a cask name."
+  echo "Run brew cask-check-version --help for more info."
+  exit 1
+fi
+data=$(curl "https://raw.githubusercontent.com/smileycreations15/homebrew-tap/master/meta/versions-cask/$1.meta" 2>/dev/null)
+if [[ $data == "404: Not Found" ]]
+then
+  read -p "No versions found, do you want to open a issue on GitHub? (y/n) " issue
+  if [[ "y" == $issue || "Y" == $issue ]]
+  then
+    open "https://github.com/smileycreations15/homebrew-tap/issues/new?title=Version%20request%20for%20cask%20$1"
+  fi
+else
+  curl "https://raw.githubusercontent.com/smileycreations15/homebrew-tap/master/meta/versions-cask/$1.meta"
+fi
