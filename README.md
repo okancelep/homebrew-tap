@@ -32,5 +32,7 @@ brew cask-install-version [cask] [version]
 ```
 brew cask-check-version [cask]
 ```
+## Bottles
+Bottles are available at https://github.com/smileycreations15/homebrew-tap-bottles
 ## Need versions of other formula?
 If the repository does not have it, you can request it.
