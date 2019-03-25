@@ -16,17 +16,10 @@ for D in `find ./Formula -type f`
 do
     name=$(basename ${D%.*})
     echo "Testing $name"
-    printf "\e[1;34m==> \e[1;39m"
-    echo "brew install $D --build-bottle"
-    brew install $D --build-bottle
-    if [ 0 != $? ]
-    then
-      echo "Failed to install $name"
-      exit 2
-    fi
-    printf "\e[1;34m==> \e[1;39m"
-    echo "brew postinstall $name"
-    brew postinstall $name
+    printf "\e[1;34m==> \e[1;39m\e[1m"
+    echo "brew install $D"
+    printf "\e[0m"
+    brew install $D
     if [ 0 != $? ]
     then
       echo "Failed to install $name"
@@ -37,8 +30,9 @@ for D in `find ./Casks -type f`
 do
     name=$(basename ${D%.*})
     echo "Testing cask $name"
-    printf "\e[1;34m==> \e[1;39m"
+    printf "\e[1;34m==> \e[1;39m\e[1m"
     echo -e "brew cask install $D"
+    printf "\e[0m"
     brew cask install $D
     if [ 0 != $? ]
     then
