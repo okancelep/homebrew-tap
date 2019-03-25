@@ -6,9 +6,10 @@ class CouchdbV172 < Formula
   sha256 "7b7c0db046ded544a587a8935d495610dd10f01a9cae3cd42cf88c5ae40bc431"
 
   bottle do
-    sha256 "8868d7714bfdbee9c6e3b975e4d807a8a77312d020a4e9a7d93e890e4f0565e1" => :mojave
-    sha256 "cc974d6fcbc24dc639c48e4a4a2942016553a4f3a188241af835946b34328ea8" => :high_sierra
-    sha256 "f0f136585526e769370a82935cfb574392f6a25e2cf16dacf2c1cb2703c45e7f" => :sierra
+    root_url "https://smileycreations15.com/homebrew-tap-bottles"
+    cellar :any
+    rebuild 1
+    sha256 "321eee2444c72a56db945d5fae887ba81fe1b394b6bb667ec1c29d86cbfdf6bf" => :mojave
   end
 
   head do
