@@ -1,3 +1,11 @@
+> # Important note
+> This repository is re-initalised.
+> Please run
+> ```
+brew untap smileycreations15/tap
+brew tap smileycreations15/tap
+> ```
+> to update the repository.
 # homebrew-tap
 [![Travis CI](https://travis-ci.org/smileycreations15/homebrew-tap.svg?branch=master)](https://travis-ci.org/smileycreations15/homebrew-tap)<br>
 A tap for Homebrew.
