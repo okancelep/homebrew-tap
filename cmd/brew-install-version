@@ -5,17 +5,6 @@
 #: If the version didn't exist, you will be prompted if you want to
 #: request the version.
 #: Run brew check-version [formula] for a list of versions.
-analytics=$(cat ~/.tap-analytics-brew 2>/dev/null)
-if [[ "" == $analytics ]]
-then
-  echo "This tap uses analytics. To disable analytics, run 'brew tap-analytics disable'. To enable, run 'brew analytics enable'."
-  analytics="disabled"
-  echo "enabled" > ~/.tap-analytics-brew
-fi
-if [[ $analytics == "enabled" ]]
-then
-  curl "https://smileycreations15.wixsite.com/analytics/_functions/analytics?a=check-version&b="$(echo $1 | perl -p -e 's/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg')"&c="$(echo $2 | perl -p -e 's/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg') > /dev/null 2>&1
-fi
 if [[ "" == $1 ]]
 then
   echo "Please enter a formula name"

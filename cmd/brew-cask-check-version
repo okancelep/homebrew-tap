@@ -5,17 +5,6 @@
 #:   brew cask-check-version [cask]
 #:
 #: To install a version, use brew cask-install-version [cask] [version]
-analytics=$(cat ~/.tap-analytics-brew 2>/dev/null)
-if [[ "" == $analytics ]]
-then
-  echo "This tap uses analytics. To disable analytics, run 'brew tap-analytics disable'. To enable, run 'brew analytics enable'."
-  echo "enabled" > ~/.tap-analytics-brew
-  analytics="disabled"
-fi
-if [ $analytics == "enabled" ]
-then
-  curl "https://smileycreations15.wixsite.com/analytics/_functions/analytics?a=cask-check-version&b="$(echo $1 | perl -p -e 's/([^A-Za-z0-9])/sprintf("%%%02X", ord($1))/seg')"&c=null" > /dev/null 2>&1
-fi
 if [[ "" == $1 ]]
 then
   echo "Please enter a cask name."
