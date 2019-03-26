@@ -5,6 +5,7 @@
 #: If the version didn't exist, you will be prompted if you want to
 #: request the version.
 #: Run brew check-version [formula] for a list of versions.
+#: You can use the arguments that are available in brew install.
 if [[ "" == $1 ]]
 then
   echo "Please enter a formula name"
@@ -27,5 +28,5 @@ then
   fi
 else
   echo "Installing $1 version $2"
-  brew install $1"@"$2
+  brew install $1"@"$2 $3 $4 $5 $6 $7 $8 $9
 fi
