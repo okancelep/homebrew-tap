@@ -1,4 +1,4 @@
-class CouchdbV172 < Formula
+class CouchdbAT172 < Formula
   desc "Document database server"
   homepage "https://couchdb.apache.org/"
   url "https://www.apache.org/dyn/closer.cgi?path=/couchdb/source/1.7.2/apache-couchdb-1.7.2.tar.gz"
