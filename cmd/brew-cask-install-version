@@ -28,7 +28,7 @@ then
   echo "Run brew cask-install-version --help for more info."
   exit 2
 fi
-data=$(curl "https://raw.githubusercontent.com/smileycreations15/homebrew-tap/master/Casks/$1-v$2"".rb" 2>/dev/null)
+data=$(curl "https://raw.githubusercontent.com/smileycreations15/homebrew-tap/master/Casks/"$1"@"$2".rb" 2>/dev/null)
 if [[ $data == "404: Not Found" ]]
 then
   read -p "Version not found, do you want to open a issue on GitHub? (y/n) " issue
@@ -38,5 +38,5 @@ then
   fi
 else
   echo "Installing $1 version $2"
-  brew cask install "$1-v$2"
+  brew cask install $1"@"$2
 fi
