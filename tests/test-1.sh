@@ -17,9 +17,9 @@ do
     name=$(basename ${D%.*})
     echo "Testing $name"
     printf "\e[1;34m==> \e[1;39m\e[1m"
-    echo "brew install $D"
+    echo "brew install $D --build-from-source"
     printf "\e[0m"
-    brew install $D
+    brew install $D --build-from-source
     if [ 0 != $? ]
     then
       echo "Failed to install $name"
