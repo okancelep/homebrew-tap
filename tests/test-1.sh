@@ -25,6 +25,9 @@ do
       echo "Failed to install $name"
       exit 2
     fi
+    printf "\e[1;34m==> \e[1;39m\e[1m"
+    echo "brew test $name"
+    printf "\e[0m"
     brew test $name
     if [ 0 != $? ]
     then
