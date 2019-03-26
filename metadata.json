@@ -1,0 +1,30 @@
+{
+  "type" : "formula-metadata",
+  "data" : {
+    "tap" : "https://github.com/smileycreations15/homebrew-tap",
+    "git" : "https://github.com/smileycreations15/homebrew-tap.git",
+    "name" : "homebrew-tap",
+    "casks" : {
+      "atom@1.35.1.rb" : {
+        "version" : "1.7.2",
+        "path" : "Casks/atom@1.35.1.rb",
+        "is-version" : true,
+        "url-install" : "https://smileycreations15.com/homebrew-tap/Casks/atom@1.35.1.rb",
+        "uuid" : "310E9222-2864-4B3D-BD9F-AB40CB67BE6D"
+      }
+    },
+    "formula" : {
+      "couchdb@1.7.2" : {
+        "version" : "1.7.2",
+        "path" : "Formula/couchdb@1.7.2.rb",
+        "is-version" : true,
+        "bottle" : {
+          "contains-bottle" : true,
+          "bottle-url" : "https://smileycreations15.com/homebrew-tap-bottles/couchdb-v1.7.2--1.7.2.mojave.bottle.1.tar.gz"
+        },
+        "url-install" : "https://smileycreations15.com/homebrew-tap/Formula/couchdb@1.7.2.rb",
+        "uuid" : "C7FC8191-E622-4C68-B115-C144CFBB86D4"
+      }
+    }
+  }
+}
