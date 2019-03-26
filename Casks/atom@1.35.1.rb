@@ -1,4 +1,4 @@
-cask 'atom@1.35.1.rb' do
+cask 'atom@1.35.1' do
   version '1.35.1'
   sha256 '589fd926f8a6ea2c73fb9fecad4506e64f9aa4f9b27dd1c22c284f6a0cbd0937'
 
