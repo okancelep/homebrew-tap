@@ -8,8 +8,7 @@ class CouchdbAT172 < Formula
   bottle do
     root_url "https://smileycreations15.com/homebrew-tap-bottles"
     cellar :any
-    rebuild 1
-    sha256 "321eee2444c72a56db945d5fae887ba81fe1b394b6bb667ec1c29d86cbfdf6bf" => :mojave
+    sha256 "ca7b546e053dd3f7bbad7f8f0cfccaa9f3ff0f620d2026ba600d353f7635af28" => :mojave
   end
 
   head do
