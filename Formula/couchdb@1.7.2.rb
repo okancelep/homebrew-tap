@@ -6,7 +6,7 @@ class CouchdbAT172 < Formula
   sha256 "7b7c0db046ded544a587a8935d495610dd10f01a9cae3cd42cf88c5ae40bc431"
 
   bottle do
-    root_url "https://smileycreations15.com/homebrew-tap-bottles"
+    root_url "https://smileycreations15.com/homebrew-tap-bottles/bottles"
     cellar :any
     sha256 "ca7b546e053dd3f7bbad7f8f0cfccaa9f3ff0f620d2026ba600d353f7635af28" => :mojave
   end

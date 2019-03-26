@@ -20,7 +20,7 @@
         "is-version" : true,
         "bottle" : {
           "contains-bottle" : true,
-          "bottle-url" : "https://smileycreations15.com/homebrew-tap-bottles/couchdb@1.7.2--1.7.2.mojave.bottle.tar.gz"
+          "bottle-url" : "https://smileycreations15.com/homebrew-tap-bottles/bottles/couchdb@1.7.2-1.7.2.mojave.bottle.tar.gz"
         },
         "url-install" : "https://smileycreations15.com/homebrew-tap/Formula/couchdb@1.7.2.rb",
         "uuid" : "C7FC8191-E622-4C68-B115-C144CFBB86D4"
