@@ -25,6 +25,12 @@ do
       echo "Failed to install $name"
       exit 2
     fi
+    brew test $name
+    if [ 0 != $? ]
+    then
+      echo "Failed to test $name"
+      exit 2
+    fi
 done
 for D in `find ./Casks -type f`
 do
